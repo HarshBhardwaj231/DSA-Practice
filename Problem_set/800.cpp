@@ -1,0 +1,389 @@
+// Problem no. 344A
+// Time complexity - O(n)
+#include<iostream>
+using namespace std;
+int main (){
+    cout << "ENTER: ";
+    int n ;
+    cin >> n ;
+    int count = 0 ;
+    string arr[n];
+    for (int i = 0 ; i < n ; i++){
+        cin >> arr[i];
+    }
+    
+    for (int i = 0 ; i < n-1 ; i++){
+        if (arr[i] != arr[i+1]){
+            count ++ ;
+        }
+    }
+    count = count +1;
+    cout << count << endl;
+    return 0;
+}
+
+//Problem no. 405A
+//Time Complexity - O(nlog(n))
+#include <bits/stdc++.h>
+using namespace std ;
+int main (){
+    cout << "ENTER: ";
+    int n ;
+    cin >> n ;
+    int arr[n] ;
+    for (int i = 0 ; i < n ; i++){
+        cin >> arr[i];
+    }
+    sort (arr, arr+n);
+    for (int i = 0 ; i <n ; i++){
+        cout <<  arr[i];
+    }
+    return 0 ;
+}
+
+//Problem no. 791A
+//Time complexity O()
+
+#include<bits/stdc++.h>
+using namespace std;
+int main (){
+    cout << "ENTER: ";
+    int a , b ;
+    cin >> a ;
+    cin >> b ;
+    int count = 0 ;
+    while(a<=b){
+            a = a*3;
+            b = b*2;
+            count++;
+    }
+    cout << count << endl;
+    return 0 ;
+}
+
+//Problem no. 731A
+//Time complexity : O(n)
+#include<bits/stdc++.h>
+using namespace std ;
+int main (){
+    string s ;
+    cin >> s ;
+    int n = s.size();
+    char current = 'a', target ;
+    int distance1 , distance2, new_distance = 0;
+    for (int i = 0 ; i < n ; i++ ){
+         target = s[i];
+         distance1 = abs(current - target);
+         distance2 = 26 - abs(current - target );
+         current = target ;
+         if(distance1 < distance2){
+             new_distance += distance1 ;
+         }
+         else if (distance1 > distance2){
+             new_distance += distance2 ;
+         }
+         else if (distance1 == distance2){
+             new_distance += distance1 ; 
+         }
+    }
+    cout << new_distance << endl ; 
+    return 0 ;
+}
+
+//Problem no. 151A 
+//time complexity - O(1)
+ 
+#include<bits/stdc++.h>
+using namespace std ;
+int main (){
+    cout << "ENTER: ";
+    int n , k , l , c , d , p , nl , np ;
+    cin >> n >> k >> l >> c >> d >> p >> nl >> np ;
+    int total_drink , total_slices, total_salt, toast1,toast2, toast3 ;
+    
+    total_drink=k*l;
+    toast1=total_drink/nl;
+    
+    total_slices=c*d;
+    toast2=total_slices;
+    
+    total_salt=p/np;
+    toast3=total_salt;
+    
+    if(toast1 > toast2){
+        if(toast2 < toast3){cout<< toast2 / n;}
+        else if (toast2 > toast3){cout<< toast3 / n;}
+    }
+    else if(toast1 < toast2){
+        if(toast1 < toast3){cout<<toast1 / n;}
+        else if (toast1 >toast3){cout<<toast3 / n;}
+    }
+   else if ((toast1 == toast2) && (toast2 == toast3)) {
+    cout << toast1 / n;
+}
+else if (toast1 == toast2) {
+    if (toast1 < toast3) {
+        cout << toast1 / n;
+    }
+    else if (toast1 > toast3) {
+        cout << toast3 / n;
+    }
+}
+else if (toast2 == toast3) {
+    if (toast2 > toast1) {
+        cout << toast1 / n;
+    }
+    else if (toast2 < toast1) {
+        cout << toast2 / n;
+    }
+}
+else if (toast1 == toast3) {
+    if (toast1 < toast2) {
+        cout << toast1 / n;
+    }
+    else if (toast1 > toast2) {
+        cout << toast2 / n;
+    }
+}
+  return 0;
+    }
+
+
+    ////////// another method for same earlier giving error in test 13 .
+    #include<bits/stdc++.h>
+using namespace std ;
+int main (){
+    int n , k , l , c , d , p , nl , np ;
+    cin >> n >> k >> l >> c >> d >> p >> nl >> np ;
+    int total_drink , total_slices, total_salt, toast1,toast2, toast3 ;
+    
+    total_drink=k*l;
+    toast1=total_drink/nl;
+    
+    total_slices=c*d;
+    toast2=total_slices;
+    
+    total_salt=p/np;
+    toast3=total_salt;
+    
+    int ans = min({toast1, toast2, toast3});
+      cout << ans / n;
+  return 0;
+    }
+ 
+
+//Problem no. : 1030A
+// Time Complexity : O(n)
+
+#include<bits/stdc++.h>
+using namespace std ;
+int main (){
+    int n ;
+    cin >> n ;
+    int arr[n];
+    int sum = 0 ; 
+    for (int i = 0 ; i < n ; i++){
+        cin >> arr[i] ;
+    }
+    for (int i = 0 ; i < n ; i++){
+        if (arr[i] == 1){
+            sum = sum + arr[i];
+        }
+    }
+    if (sum != 0 ){
+        cout << "Hard";
+    }
+    else 
+        cout << "Easy";
+    return 0 ;
+}
+
+//Problem no. 58A
+//Time Complexity :O(n)
+
+#include <bits/stdc++.h>
+using namespace std;
+int main (){
+    cout << "ENTER: ";
+    int n ;
+    string a = "hello";
+    string s ;
+    cin >> s ; 
+    n = s.size();
+    int target=0;
+    for (int i = 0 ; i < n ; i++){//ahhellllloou
+        if (s[i] == a[target]){// h e l l o
+            target++;          // 0 1 2 3 4
+        }
+    }    
+    if (target== a.size())
+        cout << "Yes" << endl;
+    else 
+    cout << "NO" << endl ;
+    return 0 ;
+}
+
+// problem no . 427A
+// Time complexity : O(n)
+
+#include <bits/stdc++.h>
+using namespace std;
+int main (){
+    cout << "ENTER: ";
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0 ; i < n ; i++){
+        cin >> arr[i];
+    }
+    int police =0 , untreated = 0 ;
+    for (int i = 0 ; i < n ; i++){
+        if (arr[i] >= 1){police+=arr[i];}
+        else if (arr[i] == -1){
+           if (police > 0){police--;}
+           else
+               untreated++;
+        }
+    }
+    cout << untreated << endl ;
+    return 0 ;
+}
+
+// problem no. 266A
+// time complexity : O(n)
+
+#include <bits/stdc++.h>
+using namespace std;
+int main (){
+    cout << "ENTER: ";
+    int n ;
+    cin >> n ;
+    int k;
+    cin >> k ;
+    int count = 0;
+
+    int arr[n];
+    for (int i = 0 ; i < n ; i++){
+        cin >> arr[i];
+    }
+    int score = arr[k-1];
+    for (int i = 0 ; i < n ; i++){
+        if ((arr[i] >= score) && (arr[i]> 0 )){
+         count++;   
+        }
+    }
+    
+        cout <<  count <<endl ;
+    
+    return 0 ;
+}
+
+// problem no. - 116A
+// time complexity - O(n)
+
+#include <bits/stdc++.h>
+using namespace std;
+int main (){
+    int n ;
+    cin >> n ;
+    
+    int current = 0, total=0;
+    
+    int arr[n][2];
+    for (int i = 0 ; i < n ; i++){
+        cin >> arr[i][0]>>arr[i][1];
+    }
+    
+    for (int i = 0 ; i < n ; i++){
+        current -= arr[i][0];
+        current += arr[i][1];
+        total = max(total,current);
+    }
+     cout << total <<endl ;
+    return 0 ;
+}
+
+// probelm no .469A 
+// T.C : 
+
+#include <bits/stdc++.h>
+using namespace std;
+int main (){
+    int n ;
+    cin >> n ;
+    
+    int p ;
+    cin >> p ;
+    bool arr[101] = {0};
+    for (int i = 0 ; i < p ; i++){
+        int x ;
+        cin >> x ; 
+        arr[x] = 1 ;
+    }
+    
+    int q ;
+    cin >> q ; 
+    for (int i = 0 ; i < q ; i++){
+        int x ;
+        cin >> x ;
+        arr[x] = 1;
+    }
+    for (int i = 1 ; i <= n ; i++){
+        if (!arr[i]){
+        cout << "Oh, my keyboard!" << endl ;
+        return 0;
+        } 
+    }
+    cout << "I become the guy." << endl ; 
+    return 0;
+}
+
+
+#include <bits/stdc++.h>
+using namespace std;
+int main (){
+    cout << "ENTER: ";
+    int n ;
+    cin >> n ;
+    int x , y ;
+    cin >> x >> y ;
+       bool found = false ;
+       for (int i = 1 ; i < y ; i++){
+                if((i%x == 0) && (y%i != 0)){
+                 found = true ;
+                }
+        }
+        if (found){
+            cout << "YES" << endl;
+        }
+        else if (!found){
+            cout << "NO" << endl;
+        }
+    
+    return 0;
+}
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std ;
+int main(){
+    int n , count = 0;
+    string s = "{a,b,}";
+    s.erase(remove(s.begin(),s.end(),'{'),s.end());
+    s.erase(remove(s.begin(),s.end(),','),s.end());
+    s.erase(remove(s.begin(),s.end(),'}'),s.end());
+    cout << s << endl; 
+    n=s.size();
+    sort(s.begin(),s.end());
+    bool copy = false;
+    for (int i = 1 ; i < n ; i++){
+        if (s[i] != s[i-1]){
+            copy = true ;
+            count++;
+        }
+    }
+    cout << count << endl ;
+    return 0;
+}
