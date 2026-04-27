@@ -431,3 +431,88 @@ int main (){
         cout << -((n/2) +1) ;
     return 0;    
 }
+
+
+// problem no. 231A
+// Time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main (){
+    int n ;
+    cin >> n;
+    int arr[n][3];
+    int count = 0,total , score=0;
+    for (int i = 0 ; i<n ; i++){
+        cin >> arr[i][0] >> arr[i][1] >> arr[i][2];
+    }
+    for (int i = 0 ; i<n ; i++){
+        total = arr[i][0] + arr[i][1] + arr[i][2] ;
+        if (total > 1){
+            count++;
+        }
+    }
+    cout <<count << endl ;
+    return 0 ;
+}
+
+//problem no.271A
+//Time complexity - O(1)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main (){
+    int y ;
+    cin >> y ;
+    while (true){
+        y++;
+        int d=y%10;
+        int c = (y/10)%10;
+        int b = (y/100)%10;
+        int a = (y/1000)%10;
+        
+        if ((a!=b) && (a!=c) && (a!=d) &&  (b!=a) && (b!=c) && (b!=d) && (c!=a) && (c!=b) && (c!=d) && (d!=a) && (d!=b) && (d!=c)){
+            cout << y <<endl;
+            break;
+        }
+    }
+    return 0 ;
+}
+
+//problem no.1903A 
+// Time complexity -O(nlogn)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ;
+    cin >> t;
+    while (t--){
+        int n , k ;
+        cin >> n >> k ;
+        int arr[n];
+        for (int i = 0 ; i < n ; i++){
+            cin >> arr[i];
+        }
+        int dup[n];
+        bool found = true ;
+        for(int i = 0 ; i < n ; i++){
+            dup[i]=arr[i];
+        }
+        sort (dup , dup+n);
+        
+        for (int i = 0 ; i < n ; i++){
+            if(arr[i]!=dup[i]){
+                found = false;
+            }
+        }
+    
+        if ((k>1)||(found == true)){
+            cout << "YES" << endl;
+        }
+        else if ((k==1)||(found == false)){
+            cout << "NO" << endl;
+        }
+    }
+    return 0 ;
+}
