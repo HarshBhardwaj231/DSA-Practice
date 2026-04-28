@@ -516,3 +516,41 @@ int main(){
     }
     return 0 ;
 }
+
+// problem no. - 200B
+// time complexity O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n ;
+    cin>>n;
+    int arr[n];
+    double result =0 ;
+    for (int i = 0 ; i<n ; i++){
+        cin >> arr[i];
+        result += arr[i];
+    }
+    cout << result/n << endl;
+    return 0 ;
+}
+
+//problem no. 136A
+// time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std ;
+int main (){
+    int n ;
+    cin >> n ;
+    int arr[n];
+    int per[n]={0};
+    for (int i = 1 ; i<= n ; i++){
+        cin >> arr[i];
+        per[arr[i]]=i;
+    }
+    for (int i = 1 ; i<= n ; i++){
+        cout << per[i] << " ";
+    }
+    return 0 ;
+}
