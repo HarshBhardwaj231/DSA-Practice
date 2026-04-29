@@ -618,3 +618,40 @@ int main (){
     }
     return 0 ;
 }
+
+//problem no .  144A
+// time complexity - O(n);
+
+#include <bits/stdc++.h>
+using namespace std ;
+int main (){
+    int n,count1=0,count2=0;
+    cin >> n;
+    vector<int>v;
+    for (int i = 1; i <=n ; i++){
+        int x ;
+        cin >> x ;
+        v.push_back(x);
+    }
+    int x=*max_element(v.begin(),v.end());
+    int y=*min_element(v.begin(),v.end());
+    
+    for (int i =0; i <=n-1 ; i++){
+        if (v[i]==x){
+            count1 = i;
+            break;
+        }
+    }
+    for (int i = n-1 ; i>=0 ; i--){
+        if (v[i] ==y){
+            count2 = (n-1)-i;
+            break;
+        }
+    }
+    int total = count1 + count2;
+    if (count1 > ((n-1)-count2)){
+        total--;
+    }
+    cout << total << endl;
+    return 0 ;
+}
