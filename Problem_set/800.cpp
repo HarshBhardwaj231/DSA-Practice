@@ -591,3 +591,30 @@ int main (){
     cout << "m1: " << m1 << " m2: " << m2 << " m3: " << m3 << " m4: " << m4 << endl;
     return 0 ;
 }
+
+// problem no . - 61 A 
+// time complexity - O(n)
+
+#include <bits/stdc++.h>
+using namespace std ;
+int main (){
+    int n ;
+    string s1 ; 
+    string s2 ;
+    cin >> s1 >> s2 ;
+    n = s1.size();
+    string s3 (n, '0');
+    
+    for (int i = 0 ; i < n ; i++){
+        if (s1[i] == s2[i]){
+            s3[i]='0';
+        }
+        else if (s1[i]!=s2[i]){
+            s3[i]='1';
+        }
+    }
+    for (int i = 0 ; i < n ; i++){
+        cout << s3[i] ;   
+    }
+    return 0 ;
+}
