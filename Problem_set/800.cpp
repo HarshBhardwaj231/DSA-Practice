@@ -554,3 +554,40 @@ int main (){
     }
     return 0 ;
 }
+
+// practice question - finding 1st , 2nd , 3rd , 4th largest no. ;
+// time complexity - O(n);
+
+#include <bits/stdc++.h>
+using namespace std ;
+int main (){
+    int n ;
+    cin >> n;
+    vector<int>v;
+    for (int i = 0 ; i < n ; i++){
+        int x ; 
+        cin >> x ;
+        v.push_back(x);
+    }
+    int m1 = 0 , m2 = 0 , m3 = 0 , m4 = 0 ;
+    for (int i = 0 ; i < n ; i ++){
+        int x = v[i];
+        if (x > m1){
+            m4 = m3;
+            m3 = m2;
+            m2 = m1;
+            m1 = x ;
+        }
+        else if (x > m2 && x!=m1){
+            m2 = x ;
+        }
+        else if (x > m3 && x!=m1 && x!=m2){
+            m3 = x ;
+        }
+        else if (x > m4 && x!=m1 && x!=m2 && x!=m3){
+            m4 = x;
+        }
+    }
+    cout << "m1: " << m1 << " m2: " << m2 << " m3: " << m3 << " m4: " << m4 << endl;
+    return 0 ;
+}
