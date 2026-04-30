@@ -738,3 +738,36 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no . -1742A
+// time complextiy - O(n)
+
+#include<bits/stdc++.h>
+using namespace std ;
+int main (){
+    int t;
+    cin >> t ;
+    while (t--){
+        vector<int>v;
+        for (int i = 0 ; i <3 ; i++){
+            int x ;
+            cin  >> x;
+            v.push_back(x);
+        }
+        bool found = false; 
+        for (int i = 0 ; i < 1; i++){
+            int a = v[i];
+            int b = v[i+1];
+            int c = v[i+2];
+            if ( a+b==c || a+c == b || b+c== a){
+                found = true ;
+            }
+        }
+        if (found ){
+            cout << "YES" << endl;
+        }
+        else 
+            cout << "NO" << endl;
+    }
+    return 0 ;
+}
