@@ -824,3 +824,26 @@ int main(){
     cout << value << endl;
     return 0 ;
 }
+
+//problem no. - 1328A
+// time complexity - O(1)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ;
+    cin >> t ;
+    while (t--){
+      long long a, b ;
+      cin >> a >> b ;
+      int count ;
+      if (a%b==0){
+          cout << 0 << endl;
+      }
+      else {
+          count = b-(a%b);
+          cout<< count << endl;
+      }
+    }
+    return 0 ;
+}
