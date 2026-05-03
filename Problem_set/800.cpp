@@ -802,3 +802,25 @@ int main (){
         cout << endl;
     }
 }
+
+
+// problem no. - 
+// time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    long long  n , k;
+    cin >> n >> k;
+    long long odd = (n+1)/2;
+    long long value ;
+    long long pos = k- odd;
+    if (k <= odd){
+         value = 2*k-1;    
+    }
+    else if (k > odd){
+         value = pos*2 ;
+    }
+    cout << value << endl;
+    return 0 ;
+}
