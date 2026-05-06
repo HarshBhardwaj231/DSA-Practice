@@ -868,3 +868,21 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no.479A
+// time complexity - O(1)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a , b , c;
+    cin >> a >> b >> c ;
+    int m1,m2,m3,m4,m5 ;
+    m1= a+b*c;
+    m2= a*(b+c);
+    m3= a*b*c;
+    m4= (a+b)*c;
+    m5= a+b+c;
+    cout << max({m1,m2,m3,m4,m5}) << endl;
+    return 0 ;
+}
