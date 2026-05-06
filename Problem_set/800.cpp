@@ -847,3 +847,24 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no.1475 
+//time complexity - O(1)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    long long t ; 
+    cin >> t ; 
+    while (t--){
+        long long n ;
+        cin >> n ;
+        bool found = false;
+        while(n%2==0){
+            n=n/2;
+        }
+        if(n==1){cout << "NO" << endl;}
+        else {cout << "YES" << endl;}
+    }
+    return 0 ;
+}
