@@ -886,3 +886,17 @@ int main(){
     cout << max({m1,m2,m3,m4,m5}) << endl;
     return 0 ;
 }
+
+//problem no. - 451A
+//Time complexity - O(1)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n , m ; 
+    cin >> n >> m ;
+    if (min(n,m) % 2==1){
+        cout << "Akshat" << endl;}
+    else {cout << "Malvika" << endl;}
+    return 0 ;
+}
