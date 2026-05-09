@@ -900,3 +900,26 @@ int main(){
     else {cout << "Malvika" << endl;}
     return 0 ;
 }
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,m;
+    cin >> n >> m ;
+
+    vector<int>v;
+    for(int i = 0 ; i < m ; i++){
+        int x ;
+        cin >> x ; 
+        v.push_back(x);
+    }
+    int  mn= v[0];
+    sort(v.begin(),v.end());
+    for(int i = 1 ; i <m; i++){
+        mn=min(mn,v[i]-v[i-1]);
+    }
+    cout << mn << endl;
+    return 0 ;
+}
