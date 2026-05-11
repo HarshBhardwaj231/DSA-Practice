@@ -67,3 +67,29 @@ int main (){
         cout << max(mx1,mx2)+1 << endl;
     }
 }
+
+//problem no 1875A
+//time complexity - O(n)
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ;
+    cin >> t ;
+    while (t--){
+        long long a , b , n ;
+        cin >> a >> b >> n ;
+        vector<long long >v;
+        for(int i  = 0 ; i < n ; i++){
+            int x ;
+            cin >> x ;
+            v.push_back(x);
+        }
+        long long total = b ;
+        for(int i = 0 ; i < n ; i++){
+            total += min(v[i],a-1);
+        }
+        cout  << total << endl;
+    }
+}
