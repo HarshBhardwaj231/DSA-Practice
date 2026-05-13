@@ -117,3 +117,35 @@ int main(){
     cout << abs(count1-count2) << endl;
     return 0 ;
 }
+
+
+//problem mo.320A
+//time complexity -O(n)
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    string s ;
+    cin >> s;
+    n=s.size();
+    bool found = true;
+    for(int i = 0 ; i<n ; i++){
+        if(s[0]==('4') || s.find("444")!=-1){
+            found = false;
+        }
+    }
+    for (int i = 0 ; i < n ; i++){
+        if(s[i]!='1' && s[i]!='4'){
+            found = false;
+        }
+    }
+    if(found){
+        cout << "YES" ;
+    }
+    else {
+        cout << "NO";
+    }
+    return 0 ;
+}
