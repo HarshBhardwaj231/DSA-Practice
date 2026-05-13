@@ -149,3 +149,32 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no.149A
+//time complexity - O(nlogn)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int k;
+    cin >> k;
+    vector<int>v;
+    for(int i = 0 ; i < 12 ; i++){
+        int x ;
+        cin >> x ;
+        v.push_back(x);
+    }
+    sort(v.begin(),v.end(),greater<int>());
+    int total = 0 , count = 0 ;
+    for(int i =0 ; i< 12 ; i++){
+        if(total < k ){
+            count++;
+            total += v[i];
+        }
+    }
+    if(total >= k)
+    cout << count << endl;
+    else 
+    cout << "-1" << endl;
+    return 0 ;
+}
