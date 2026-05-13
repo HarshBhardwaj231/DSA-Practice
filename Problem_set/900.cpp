@@ -93,3 +93,27 @@ int main(){
         cout  << total << endl;
     }
 }
+
+//problem no. - 556A
+// time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin >> n ;
+    string s ;
+    cin >> s ;
+    n = s.size();
+    int count1 = 0 , count2 = 0; 
+    for(int i = 0 ; i < n ; i++){
+        if(s[i]=='0'){
+            count1++;
+        }
+        else {
+            count2++;
+        }
+    }
+    cout << abs(count1-count2) << endl;
+    return 0 ;
+}
