@@ -923,3 +923,29 @@ int main(){
     cout << mn << endl;
     return 0 ;
 }
+
+
+//problem no.1703A
+//time complexity -O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ;
+    cin >> t ;
+    while(t--){
+        string s;
+        cin >> s;
+        string s1="YES";
+        for(int i = 0 ; i < 3 ; i++){
+            s[i]=toupper(s[i]);
+        }
+        if(s1==s){
+            cout << "YES" << endl;
+        }
+        else {
+            cout << "NO" << endl;
+        }
+    }
+    return 0;
+}
