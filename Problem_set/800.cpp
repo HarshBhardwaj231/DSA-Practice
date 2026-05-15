@@ -949,3 +949,30 @@ int main(){
     }
     return 0;
 }
+
+//problem no. - 723A
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+     vector<int>v;
+     for(int i = 0 ;  i < 3 ; i++){
+         int x;
+         cin >> x ;
+         v.push_back(x);
+     }
+     int a , b , c;
+     int first , second , third ;
+     for(int i = 0 ; i < 1 ; i++){
+         a =abs(v[i]-v[i+1]);
+         b =abs(v[i+1]-v[i+2]);
+         c =abs(v[i+2]-v[i]);
+         
+         first = min(a,min(b,c));
+         third = max(a,max(b,c));
+         second = a+b+c-first-third;
+     }
+     cout << first+second << endl;
+     return 0 ;
+}
