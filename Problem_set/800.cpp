@@ -976,3 +976,36 @@ int main(){
      cout << first+second << endl;
      return 0 ;
 }
+
+
+//problem no.141A
+//time complexity - O(nlogn)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s1,s2,s3;
+    cin >> s1 >> s2 >> s3;
+  
+    string s = s1 + s2;
+    int n = s.size();
+    int m = s3.size();
+    
+    sort(s.begin(),s.end());
+    sort(s3.begin(),s3.end());
+    
+    bool string = true;
+    for(int i = 0 ; i < n ; i++){
+        if(s3[i]!=s[i]){
+            string = false;
+        }
+    }
+    
+    if(string && m==n){
+        cout<<"YES" <<endl;
+    }
+    else {
+        cout << "NO" <<endl;
+    }
+    return 0 ;
+}
