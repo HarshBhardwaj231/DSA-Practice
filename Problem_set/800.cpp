@@ -1067,3 +1067,39 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no.1399A
+//time complexity -O(n)
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        int n;
+        cin >> n;
+        vector<int> v;
+        for (int i = 0; i < n; i++) {
+            int x;
+            cin >> x;
+            v.push_back(x);
+        }
+        sort(v.begin(), v.end());
+        bool found = true;
+        for (int i = 1; i < n; i++) {
+            if (abs(v[i] - v[i - 1]) > 1) {
+                found = false;
+                break;
+            }
+        }
+        if (found) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
+    }
+    return 0;
+}
