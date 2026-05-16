@@ -1048,3 +1048,22 @@ int main(){
     return 0 ;
 }
     
+
+// problem no. 1409A
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ;
+    cin >> t ;
+    while (t--){
+        int a , b ;
+        cin >> a >> b ;
+        int diff ;
+        diff = abs(a-b);
+        int ans = (diff + 9)/10;
+        cout << ans << endl;
+    }
+    return 0 ;
+}
