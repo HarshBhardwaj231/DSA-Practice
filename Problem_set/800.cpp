@@ -1249,3 +1249,30 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no .- 750A 
+// time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n, k;
+    cin >> n >> k;
+
+    int m = 240 - k;
+    int count = 0;
+
+    for (int i = 5; i <= 5 * n; i += 5) {
+        m = m - i;
+        if (m >= 0) {
+            count++;
+        } 
+        else {
+            break;
+        }
+    }
+
+    cout << count << endl;
+    return 0;
+}
