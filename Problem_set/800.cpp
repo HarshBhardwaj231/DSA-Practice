@@ -1369,3 +1369,45 @@ int main(){
     cout << v.size()/3 << endl;
     return 0;
 }
+
+//problem no. 1858A
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ;
+    cin >> t ;
+    while (t--){
+        int a , b , c;
+        cin >> a >> b >> c ;
+        int anna , katie ;
+        if(c%2==1){
+            anna = c/2 + 1 + a ;
+            katie = c/2 + b ;
+            if (anna > katie){
+                cout << "First" << endl;
+            }
+            else if (anna == katie){
+                cout << "Second" << endl;
+            }
+            else if (anna < katie){
+                cout << "Second" << endl;
+            }
+        }
+        else if (c%2 == 0){
+            anna = c/2 + a;
+            katie = c/2 + b ;
+            if (anna > katie){
+                cout << "First" << endl;
+            }
+            else if (anna == katie){
+                cout << "Second" << endl;
+            }
+            else if (anna < katie){
+                cout << "Second" << endl;
+            }
+        }
+    }
+    return 0 ;
+}
