@@ -1454,3 +1454,21 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no. 1154A 
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    vector<int>v;
+    for(int i = 0 ; i < 4 ;i++){
+        int x ;
+        cin >> x;
+        v.push_back(x);
+    }
+    sort(v.begin(),v.end());
+    int sum = v[3];
+    cout << sum - v[0] << " " << sum - v[1] << " " <<sum - v[2] << endl;
+    return 0;
+}
