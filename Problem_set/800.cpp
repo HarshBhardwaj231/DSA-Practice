@@ -1303,3 +1303,25 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no. 1899A
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ; 
+    cin >> t ;
+     while (t--){
+         int n ;
+         cin >> n ;
+         int total , sum ;
+         if(((total=n-1)%3==0) ||((sum=n+1)%3==0)){
+             cout << "First" << endl;
+         }
+         else {
+             cout << "Second" << endl;
+         }
+     }
+    return 0 ;
+}
