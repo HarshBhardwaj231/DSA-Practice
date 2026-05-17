@@ -1349,3 +1349,23 @@ int main(){
     }
     return 0;    
 }
+
+//problem no 432A
+//time complexity -O(N)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n , k ;
+    cin >> n >> k ;
+    vector<int>v;
+    for(int i = 0 ; i < n ; i++){
+        int x ;
+        cin >> x ;
+        if(x+k <=5){
+            v.push_back(x);
+        }
+    }
+    cout << v.size()/3 << endl;
+    return 0;
+}
