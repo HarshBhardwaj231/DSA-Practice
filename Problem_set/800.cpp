@@ -1472,3 +1472,24 @@ int main(){
     cout << sum - v[0] << " " << sum - v[1] << " " <<sum - v[2] << endl;
     return 0;
 }
+
+//problem no - 581A
+//time complexity - O(1)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a , b ;
+    cin >> a >> b ;
+    int same , diff ;
+    same = abs(a-b)/2;
+    if(same == 0 ){
+        diff=min(a,b);
+        cout << diff << " " << same << endl;
+    }
+    else {
+        diff= max(a,b)-abs(a-b);
+        cout << diff << " " << same << endl;
+    }
+    return 0 ;
+}
