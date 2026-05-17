@@ -1411,3 +1411,46 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no. 732A
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int k , r ;
+    cin >> k >> r ;
+    int n = k;
+    int total ;
+    if(k == 1000){
+        cout<< "1" << endl;
+    }
+    else if (k /100 >=1){
+        for (int i = 1 ; i <=n ; i++){
+            total=k*i;
+            if(total%10 ==0 || total%10 ==r ){
+                cout << i << endl;
+                break;
+            }
+        }
+    }
+    else if (k/10 >= 1){
+        for (int i = 1 ; i <=n ; i++){
+            total=k*i;
+            if(total%10 == 0 || total%10 == r){
+                cout << i << endl;
+                break;
+            }
+        }
+    }
+    else if (k>=1 && k<=9){
+        for (int i = 1 ; i <=1000; i++){
+            total=k*i;
+            if(total%10 == 0 || total%10 == r){
+                cout << i << endl;
+                break;
+            }
+        }
+    }
+    return 0 ;
+}
