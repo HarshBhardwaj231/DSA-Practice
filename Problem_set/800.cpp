@@ -1579,7 +1579,7 @@ int main(){
 }
 
 //problem no. 1999A
-//time complexity - O(n)
+//time complexity - O(t)
 
 
 #include<bits/stdc++.h>
@@ -1595,5 +1595,32 @@ int main(){
         int c = a+b;
         cout << c << endl;
     }
+    return 0 ;
+}
+
+//problem no. - 758A
+//time complexity - O(n)
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n ;
+    cin >> n ;
+    vector<int>v;
+    for(int i = 0 ; i < n ; i++){
+        int x ;
+        cin >> x ;
+        v.push_back(x);
+    }
+    int mx = v[0];
+    int total = 0 ;
+    for(int i = 0 ; i < n; i++){
+        mx = max(mx,v[i]);
+    }
+    for(int i = 0 ; i < n ; i++){
+        total = total + mx-v[i];
+    }
+    cout << total << endl;
     return 0 ;
 }
