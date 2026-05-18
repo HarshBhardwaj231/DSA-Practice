@@ -1539,3 +1539,41 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no.1367B
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ;
+    cin >> t ;
+    while(t--){
+        int n ;
+        cin >> n ;
+        vector<int>v;
+        int evenwrong = 0 , oddwrong = 0 ;
+        for(int i = 0 ; i < n ; i++){
+            int x ;
+            cin >> x ;
+            v.push_back(x);
+        }
+        for(int i = 0 ; i < n ; i++){
+            if(i % 2 != v[i] % 2 ){
+                if(i%2 == 0 ){
+                    evenwrong++;
+                }
+                else if (i%2 == 1){
+                    oddwrong++;
+                }
+            }
+        }
+        if(evenwrong == oddwrong ){
+            cout << evenwrong << endl;
+        }
+        else {
+            cout << "-1" << endl;
+        }
+    }
+    return 0 ;
+}
