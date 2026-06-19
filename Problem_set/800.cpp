@@ -1775,3 +1775,40 @@ int main(){
     }
     return 0 ;
 }
+
+
+
+//problem no.1512A
+//time complexity - O (n)
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ;
+    cin >> t;
+    while(t--){
+        int n ;
+        cin >> n ;
+        vector<int>v;
+        for(int i = 0 ; i <n ; i++){
+            int x ;
+            cin >> x ;
+            v.push_back(x);
+        }
+        int same = v[0] ;
+        for(int i = 0 ; i <3 ; i++){
+            if(v[i]==v[i+1]){
+                same=v[i];
+            }
+        }
+        
+        for(int i = 0 ; i <n ; i++){
+            if(same!=v[i]){
+                cout << i+1 << endl ;
+                break;
+            }
+        }
+    }
+    return 0 ;
+}
