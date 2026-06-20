@@ -1812,3 +1812,36 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no. 1915A
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ;
+    cin >> t;
+    while(t--){                                   
+        vector<int>v;
+        for(int i = 0 ; i < 3 ; i++){
+            int x ; 
+            cin >> x ; 
+            v.push_back(x);
+        }
+        for (int i = 0 ; i < 1 ; i++){
+            if (v[i] == v[i+1]){
+                cout << v[i+2] << endl;
+                break;
+            }
+            else if (v[i] == v[i+2]){
+                cout << v[i+1] << endl;
+                break;
+            }
+            else if (v[i+1]==v[i+2]){
+                cout << v[i] << endl;
+                break;
+            }
+        }
+    }
+    return 0 ;
+}
