@@ -1848,7 +1848,7 @@ int main(){
 
 
 //problem no. 1760A
-// time complexity - O(n)
+// time complexity - O(nlogn)
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -1866,6 +1866,41 @@ int main(){
         for(int i = 0 ; i < 1 ; i++){
             cout << v[i+1] << endl;
         }
+    }
+    return 0 ;
+}
+
+
+//problem no. 1829B
+//time complexit7y - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main (){
+    int t ; 
+    cin >> t ;
+    while(t--){
+        int n ;
+        cin >> n ;
+        vector<int>v;
+        for(int i = 0 ; i < n ; i++){
+            int x ;
+            cin >> x ;
+            v.push_back(x);
+        }
+        int count = 0 ;
+        int mx = 0 ;
+        int value ;
+        for(int i = 0 ; i < n ; i++){
+            if(v[i]==0){
+                count++;
+                mx = max(count,mx) ;
+            }
+            else {
+                count = 0 ;
+            }
+        }
+        cout << mx << endl;
     }
     return 0 ;
 }
