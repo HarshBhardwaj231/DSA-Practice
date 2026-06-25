@@ -1956,3 +1956,49 @@ int main(){
     }
     return 0;
 }
+
+//problem no. 1472B
+//time complexity - O(n)
+
+
+#include<bits/stdc++.h>
+using namespace std ;
+int main(){
+    int t ;
+    cin >> t ;
+    while(t--){
+        int n ;
+        cin >> n ;
+        vector<int>v ;
+        for(int i = 0 ; i < n ; i++){
+            int x ;
+            cin >> x ;
+            v.push_back(x);
+        }
+        int total= 0;
+        int count = 0 ;
+        for(int i = 0 ; i < n ; i++){
+            total = total + v[i];
+            if(v[i]==1){
+                count++;
+            }
+        }
+        if(total%2 != 0){
+            cout << "NO" << endl;
+        }
+        else{
+            if((total/2)%2!=0){
+                if(count==0){
+                    cout << "NO" << endl;
+                }
+                else {
+                    cout << "YES" << endl;
+                }
+            }
+            else {
+                cout << "YES" << endl;
+            }
+        }
+    }
+    return 0 ;
+}
