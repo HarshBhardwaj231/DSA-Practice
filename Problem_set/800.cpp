@@ -2064,3 +2064,42 @@ int main(){
     }
     return 0 ;
 }
+
+
+//problem no.1360A
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ;
+    cin >> t ;
+    while (t--){
+        int a , b ;
+        cin >> a >> b ;
+        int c , d , ans , total;
+        if(a > b){
+            c = b*2;
+            if(a > c)
+              ans = a;
+            else
+              ans = c;
+            total = ans * ans;
+        }
+        else if(a < b){
+            c = a*2;
+            if(b > c)
+              ans = b;
+            else
+              ans = c;
+            total = ans * ans;
+        }
+        else if(a==b){
+            c = a*2;
+            ans = c ;
+            total = ans * ans ;
+        }
+        cout << total << endl;
+    }
+    return 0 ;
+}
