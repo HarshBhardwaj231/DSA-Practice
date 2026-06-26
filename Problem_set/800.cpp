@@ -2130,3 +2130,24 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no. 2065A
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        string s ;
+        cin >> s;
+        int n = s.size();
+        
+        s.pop_back();
+        s.back()= 'i';
+        
+        cout << s << endl;
+    }
+    return 0 ;
+}
