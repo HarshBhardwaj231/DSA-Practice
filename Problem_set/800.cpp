@@ -2103,3 +2103,30 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no.749A
+// time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin >> n ;
+    int a ;
+    if(n%2!=0 ){
+        a = n-3;
+        cout << a/2 + 1 << endl;
+        for(int i = 0 ; i < a/2 ; i++){
+            cout << 2 << " " ;
+        }
+        cout << 3 << endl;
+    }
+    else {
+        a=n/2;
+        cout << a << endl;
+        for(int i = 0 ; i < a ; i++){
+            cout << 2 << " ";
+        }
+    }
+    return 0 ;
+}
