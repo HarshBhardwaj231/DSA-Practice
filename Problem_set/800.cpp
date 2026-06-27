@@ -2269,3 +2269,29 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no.1368A
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ;
+    cin >> t ; 
+    while(t--){
+        int a , b , n ;
+        cin >> a >> b >> n ;
+        int count = 0;
+        while(a<=n && b<=n){
+            if(a<b){
+                a=a+b;
+            }
+            else{
+                b=b+a;
+            }
+            count++;
+        }
+        cout << count << endl;
+    }
+    return 0 ;
+}
