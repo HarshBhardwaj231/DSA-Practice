@@ -2314,3 +2314,44 @@ int main(){
         cout << ch-'a'+1 << endl;
     }
 }
+
+
+//problem no.1311A
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ; 
+    cin >> t ;
+    while(t--){
+        int a , b ;
+        cin >> a >> b ;
+        int diff ; 
+        int count =0 ;
+        diff = abs (a-b);
+        if(a==b){
+            count=0;
+        }
+        else if(a-diff==b){
+            if(diff%2==0){
+                count++;
+            }
+            else {
+                count++;
+                count++;
+            }
+        }
+        else if (a+diff==b){
+            if(diff%2!=0){
+                count++;
+            }
+            else{
+                count++;
+                count++;
+            }
+        }
+        cout << count << endl;
+    }
+    return 0;
+}
