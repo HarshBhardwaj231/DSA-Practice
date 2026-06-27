@@ -2231,3 +2231,41 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no.1834A
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        int n ; 
+        cin >> n ; 
+        int sum = 0 ;
+        int neg = 0;
+        int count = 0 ;
+        vector<int>v;
+        for(int i = 0 ; i < n ; i++){
+            int x ; 
+            cin >> x ;
+            v.push_back(x);
+            
+            sum = sum + x ;
+            if(x==-1){
+                neg++;
+            }
+        }
+        while(sum < 0){
+            sum = sum +2;
+            neg--;
+            count++;
+        }
+        if(neg%2 != 0){
+            count++;
+        }
+        cout << count << endl;
+    }
+    return 0 ;
+}
