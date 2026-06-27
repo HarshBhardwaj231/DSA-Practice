@@ -2174,3 +2174,36 @@ int main(){
     }
     return 0 ;
 }
+
+//problem nno. 1921A 
+//time complexity -O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        int x , y ;
+        cin >> x >> y ;
+        int a , b ;
+        cin >> a >> b ;
+        int p, q ;
+        cin >> p >> q;
+        int r , s ;
+        cin >> r >> s ;
+        
+        int side ;
+        if(y==b){
+            side = (x-a)+(y-b);
+        }
+        else if (y==q){
+            side = (x-p)+(y-q);
+        }
+        else if (y==s){
+            side = (x-r)+(y-s);
+        }
+        cout << side *side << endl;
+    }
+    return 0 ;
+}
