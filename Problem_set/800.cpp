@@ -2412,3 +2412,33 @@ int main(){
     }
     return 0;
 }
+
+
+//problem no.1472A
+//time complexity -O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ;
+    cin >> t ;
+    while(t--){
+        long long w , h , n ;
+        cin >> w >> h >> n ;
+        long long count = 1;
+        while(w%2 == 0 ){
+            count = count*2;
+            w/=2;
+        }
+        while(h%2==0){
+            count = count * 2 ;
+            h/= 2;
+        }
+        if(count>=n){
+            cout << "YES" << endl;
+        }
+        else {
+            cout << "NO"  <<  endl;
+        }
+    }
+}
