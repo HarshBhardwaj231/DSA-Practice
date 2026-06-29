@@ -2442,3 +2442,94 @@ int main(){
         }
     }
 }
+
+//problem no.1806A
+//time complexity - O(n)
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int a, b, c, d;
+        cin >> a >> b >> c >> d;
+        int count = 0;
+        
+        if (b > d) {
+            cout << -1 << endl;
+        }
+        
+        else if (b == d) {
+            if (a == c) {
+                cout << count << endl;
+            }
+            else if (a > c) {
+                while (a > c) {
+                    a = a - 1;
+                    count++;
+                }
+                if((a==c)&&(b==d)){
+                        cout << count << endl;
+                    }
+                else {
+                        cout << -1 << endl;
+                    }
+            }
+            else if (a < c) {
+                while (a < c) {
+                    a = a + 1;
+                    b = b + 1;
+                    count++;
+                }
+                if((a==c)&&(b==d)){
+                        cout << count << endl;
+                    }
+                else {
+                        cout << -1 << endl;
+                    }
+            }
+        }
+
+        else if (b < d) {
+            while (b < d) {
+                a = a + 1;
+                b = b + 1;
+                count++;
+            }
+            if (b == d) {
+                if (a == c) {
+                    cout << count << endl;
+                }
+                else if (a > c) {
+                    while (a > c) {
+                        a = a - 1;
+                        count++;
+                    }
+                    if((a==c)&&(b==d)){
+                        cout << count << endl;
+                    }
+                    else {
+                        cout << -1 << endl;
+                    }
+                }
+                else if (a < c) {
+                    while (a < c) {
+                        a = a + 1;
+                        b = b + 1;
+                        count++;
+                    }
+                    if((a==c)&&(b==d)){
+                        cout << count << endl;
+                    }
+                    else {
+                        cout << -1 << endl;
+                    }
+                }
+            }
+        }
+    }
+    return 0;
+}
