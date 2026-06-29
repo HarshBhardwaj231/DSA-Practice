@@ -2533,3 +2533,31 @@ int main() {
     }
     return 0;
 }
+
+
+//problem no. 1353A
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+       long long  n , m ;
+       cin >> n >> m ;
+       long long  ans ;
+       if(n==1){
+           ans = 0 ;
+       }
+       else if(n==2){
+           ans = m;
+       }
+       else {
+           ans = 2*m;
+       }
+       cout << ans << endl;
+    }
+    return 0;
+}
