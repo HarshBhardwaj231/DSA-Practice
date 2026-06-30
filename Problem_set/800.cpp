@@ -2561,3 +2561,30 @@ int main() {
     }
     return 0;
 }
+
+//problem no. 131A
+//time complexity - O(n)
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n ;
+    cin >> n ; 
+    if (n<0){
+        string s = to_string(n);
+        
+        string a = s ;
+        string b = s ;
+        
+        a.erase(a.length()-1,1);
+        b.erase(b.length()-2,1);
+        
+        cout << max(stoi(a),stoi(b)) << endl;
+    }
+    else if (n>=0){
+        cout << n << endl;
+    }
+    return 0;
+}
