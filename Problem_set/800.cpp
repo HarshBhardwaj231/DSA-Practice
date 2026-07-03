@@ -2671,3 +2671,43 @@ int main(){
     }
     return 0 ;
 }
+
+//problemm no. 1624B
+//time complexity -O(n)
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        long long a, b, c;
+        cin >> a >> b >> c;
+
+        bool ok = false;
+
+        // Case 1: Change a
+        long long na = 2 * b - c;
+        if (na > 0 && na % a == 0)
+            ok = true;
+
+        // Case 2: Change b
+        long long sum = a + c;
+        if (!ok && sum % 2 == 0) {
+            long long nb = sum / 2;
+            if (nb > 0 && nb % b == 0)
+                ok = true;
+        }
+
+        // Case 3: Change c
+        long long nc = 2 * b - a;
+        if (!ok && nc > 0 && nc % c == 0)
+            ok = true;
+
+        cout << (ok ? "YES" : "NO") << endl;
+    }
+
+    return 0;
+}
