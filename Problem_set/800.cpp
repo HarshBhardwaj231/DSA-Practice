@@ -2780,3 +2780,44 @@ int main(){
 }
 return 0 ;
 }
+
+//problem no. 1883B 
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t ;
+    cin >> t ;
+    while(t--){
+        int n ;
+        cin >> n ;
+        int n4 = n % 10;
+        int n3 = ( n / 10 ) % 10 ;
+        int n2 = (( n / 10) / 10) % 10 ;
+        int n1 = (( n / 10 ) / 10) / 10 ;
+        
+        if(n1== 0){
+            n1 = 10 ;
+        }
+        if(n2== 0){
+            n2 = 10 ;
+        }
+        if(n3== 0){
+            n3 = 10 ;
+        }
+        if(n4== 0){
+            n4 = 10 ;
+        }
+        int d = abs(1-n1);
+        int c = abs(n4-n3);
+        int b = abs(n3-n2);
+        int a = abs(n2-n1);
+        
+        int ans = 4 + a + b + c + d ;
+        
+        cout << ans << endl;
+    }
+    return 0 ;
+}
+ 
