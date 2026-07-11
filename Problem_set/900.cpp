@@ -178,3 +178,23 @@ int main(){
     cout << "-1" << endl;
     return 0 ;
 }
+
+//problem no. 460A 
+// time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+   int n , m ;
+   cin >> n >> m ;
+   int day = 0 ;
+   while(n>0){
+        n=n-1;
+        if(day%m == 0){
+            n=n+1;
+        }
+        day++;
+    }
+    cout << day-1 << endl;        
+    return 0 ;
+}
