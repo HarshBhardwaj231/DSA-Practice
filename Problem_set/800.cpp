@@ -2822,3 +2822,30 @@ int main(){
 }
  
 
+// problem no.1607A
+//time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin >> t ;
+    while(t--){
+        string s, word;
+        cin >> s >> word ;
+        int n = word.size();
+        vector<int> v(26);
+        
+        for(int i = 0 ; i < 26 ; i++){
+            v[s[i]-'a']=i;
+        }
+        
+        int ans = 0 ;
+        
+        for(int i = 1 ; i <n ; i++){
+            ans += abs(v[word[i]-'a'] - v[word[i-1]-'a']);
+        }
+        cout << ans << endl;
+    }
+    return 0 ;
+}
