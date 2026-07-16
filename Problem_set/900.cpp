@@ -223,3 +223,29 @@ int main(){
     }
     return 0 ; 
 }
+
+
+//problem no. 474A 
+// time complexity - O(n)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    char q ;
+    cin >> q ;
+    string s = "qwertyuiopasdfghjkl;zxcvbnm,./";
+    string str ;
+    cin >> str;
+    int n = str.size();
+    
+    for(int i = 0 ; i < n ; i++){
+        int found = s.find(str[i]);
+        if(q == 'R'){
+            cout <<  s[found-1] ; 
+        }
+        else{
+            cout << s[found+1] ;
+        }
+    }
+    return 0 ;
+}
