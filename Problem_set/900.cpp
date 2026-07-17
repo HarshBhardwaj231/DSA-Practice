@@ -249,3 +249,38 @@ int main(){
     }
     return 0 ;
 }
+
+//problem no.977B 
+//time complexity -O(n)
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n ; 
+    cin >> n ;
+    
+    string s ;
+    cin >> s ;
+    
+    string ans ;
+    
+    int mx = 0 ;
+    for(int i = 0 ; i < n-1 ; i++){
+        string m = s.substr(i,2);
+        int count = 0 ;
+        
+        for(int j = 0 ; j < n-1 ; j++){
+            string q = s.substr(j,2);
+            if(m==q){
+               count++; 
+            }
+        }
+        if(count>mx){
+            mx = count;
+            ans = m ;
+        }
+    }
+    cout << ans << endl;
+    return 0 ;
+}
